@@ -1,0 +1,165 @@
+.boss .site-header {
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
+}
+
+.boss .site-header .title-area {
+    display: inline-block;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    position: relative;
+    top: -150px;
+}
+
+.boss .site-title {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.boss .expand-menu {
+    text-transform: uppercase;
+    display: none;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boss .navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    min-height: 70px;
+}
+
+.boss .navbar a {
+    color: #000;
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.boss .navbar a:hover,
+.boss .expand-menu:hover {
+    color: #005cbf;
+}
+
+.boss .navbar .container {
+    color: #000;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+.boss .site-title a {
+    color: #fff;
+}
+
+.boss .site-title a:hover {
+    text-decoration: none;
+}
+
+.site-title {
+    background: #fff url(images/logo-circle.png) no-repeat;
+    background-size: 150px 150px;
+    float: left;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: 150px;
+    letter-spacing: 1px;
+    line-height: 150px;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+.header-image .site-title, .site-description {
+    background-image: none;
+    display: block;
+    height: 0;
+    text-indent: -9999px;
+}
+
+nav-item.home {
+    display: none;
+}
+
+@media (max-width: 990px) {
+    .title-area,
+    .boss .site-header .title-area{
+        display: none;
+    }
+
+    .boss .expand-menu,
+    .nav-item.home {
+        display: block;
+    }
+}
+
+@media (max-width: 990px){
+    .navbar .container-fluid {
+        width: auto;
+    }
+
+    .container-fluid .navbar-expand-md .navbar-collapse:not(.show) {
+        display: none!important;
+    }
+
+
+    .navbar-expand-md>.container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.header-username {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: rgb(250, 11, 51);
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.big {
+    margin:0 auto;
+    padding: 25px;
+}
+
+p.margin {
+    margin-top: 20px;
+}
+
+p.oblique {
+    margin-top: 20px;
+    font-style: oblique;
+}
+
+#container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.boss-form {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(225, 241, 151)!important;
+    border: 1px solid #535658;
+
+}

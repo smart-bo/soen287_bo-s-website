@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {%block head_title%}
+        {%endblock%}
+    </title>
+    <link rel="stylesheet" href="/static/layout.css"/>
+    <link rel="stylesheet" href="/static/lib/bootstrap.min.css"/>
+    <script type="text/javascript" src="/static/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/lib/popper.min.js"></script>
+    <script type="text/javascript" src="/static/lib/bootstrap.min.js"></script>
+    
+    {%block style%}
+    {%endblock%}
+    {%block scripts%}
+    {%endblock%}
+</head>
+
+<body class="container-fluid boss" style="width:60%; margin:0 auto;">
+<div class="row page-nav">
+    <div class="col site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Left Menus -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item home">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/mylife">MY LIFE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/history">HISTORY</a>
+                        </li>
+                    </ul>
+                    <!-- Right Menus -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        {%if not session.get('username')%}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Register</a>
+                        </li>
+                        {%else%}
+                        {%if session.get('username')=='admin'%}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/userlist">Userlist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+
+                        {%else%}
+                        <li class="nav-item">
+                            <span class="header-username">{{session.get('username')}}</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        {%endif%}
+                        {%endif%}
+                    </ul>
+                </div>
+            </div>
+            <div class="expand-menu" data-toggle="collapse" data-target="#navbarNav"
+                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </div>
+        </nav>
+        <div class="title-area">
+            <p class="site-title" itemprop="headline">
+                <a href="/">Bo Zhang</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <!-- Messages -->
+    {%if message:%}
+    <div class="container mt-3">
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+          </div>
+    </div>
+    {%endif%}
+  </div>
+  
+<div class="row page-title">
+    <div class="col">
+        <h1 class="text-center">
+            {%block subtitle%}
+            {%endblock%}
+        </h1>
+    </div>
+</div>
+
+
+  
+  {%block content%}
+  {%endblock%}
+
+
+<div class="row">
+    <div class="col footer text-center">
+        <p class="oblique">Posted by: Bo Zhang</p>
+        <p class="oblique">
+            <time pubdate datetime="2020-02-25"></time>
+        </p>
+    </div>
+</div>
+<!--menu selection-->
+
+<!-- Modal -->
+
+
+</body>
+</html> 
+

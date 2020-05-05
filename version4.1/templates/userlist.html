@@ -1,0 +1,50 @@
+{%extends'layout.html'%}
+{%block head_title%}
+Register
+{%endblock%}
+
+
+
+
+{%block content%}
+
+<script>
+    $(document).ready(function(){
+        console.log('script loaded')
+      $("button").click(function(){
+        $("#div1").load("/static/comment.txt");
+      });
+    });
+    </script>
+
+<div class="jumbotron">
+    <table class="table table-striped">
+        <!-- Table Header -->
+        <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    
+    <!-- This for loop creates on row for each user in the users array-->
+   
+        {%for i in range(1,users|length):%}
+
+        <tr>
+            <td>{{i}}</td>
+            <td>{{users[i]["username"]}}</td>
+            <td>{{users[i]["password"]}}</td>
+        </tr>
+   
+    {%endfor%}
+    
+</table>
+</div>
+
+<div id="div1"><h2>Here can demo JavaScript Ajax </h2></div>
+
+<button>Get Ajax example</button>
+
+{%endblock%}

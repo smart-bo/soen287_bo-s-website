@@ -1,0 +1,57 @@
+{%extends'layout.html'%}
+{%block head_title%}
+My Life
+{%endblock%}
+
+{%block style%}
+<link rel="stylesheet" href="/static/mylife.css"/>
+{%endblock%}
+
+
+{%block content%}
+<div class="col page-content">
+    <h1 class="text-center" style="padding:20px">
+        This is my life look like
+    </h1>
+
+
+    <div class="responsive">
+        <div class="img">
+            <a target="_blank" href="//www.outdoorresearch.com/ca/">
+                <img src="/static/images/img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+            </a>
+            <div class="desc">what I like to do</div>
+        </div>
+    </div>
+
+
+    <div class="responsive">
+        <div class="img">
+            <a target="_blank" href="//map.google.ca">
+                <img src="/static/images/img_forest.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">where I have went</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img">
+            <a target="_blank" href="https://www.google.com/search?q=money&sxsrf=ALeKk00aOZhcQNuGkvZWdNyZlwNA8vDd5g:1586871206409&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjOj7_0g-joAhWVGM0KHYqTDqgQ_AUoAXoECA4QAw&biw=1536&bih=722">
+                <img src="/static/images//img_lights.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">what I want</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img">
+            <a target="_blank" href="https://icetrek.com/join-a-trip/south-pole-and-antarctica">
+                <img src="/static/images/img_mountains.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">my dream</div>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}
