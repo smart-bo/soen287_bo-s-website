@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to BO's GitHub Pages
+
+i would like to know what's the difference
 
 You can use the [editor on GitHub](https://github.com/smart-bo/soen287_bo-s-website/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
